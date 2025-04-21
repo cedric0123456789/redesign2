@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: inter;
 }
 
 header {
@@ -22,19 +22,17 @@ nav {
   height: 90px;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
   margin: 0 15px;
-  font-family: inter;
 }
 
 nav ul li a {
@@ -43,25 +41,21 @@ nav ul li a {
   font-size: 18px;
 }
 
-.logo {
-  width: 70px;
-  height: 70px;
+nav ul li a.active {
+  font-weight: bold;
 }
 
+.logo,
 .logo-img {
   width: 70px;
   height: 70px;
 }
 
-nav ul li a.active {
-  font-weight: bold;
-}
-
 .hero {
   position: relative;
-  background: url("/uploads/headerbild-start.png") no-repeat center center/cover;
-  height: 660px;
   width: 100%;
+  height: 660px;
+  background: url("/uploads/headerbild-start.png") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,7 +64,6 @@ nav ul li a.active {
 }
 
 .hero h1 {
-  position: relative;
   font-size: 36px;
   color: var(--white-color);
 }
@@ -78,31 +71,31 @@ nav ul li a.active {
 .partner-slider {
   position: relative;
   overflow: hidden;
-  background: #fff; /* optional: Hintergrundfarbe */
-  padding: 2rem 0;
+  background: #fff;
+  padding: 32px 0;
 }
 
 .logos-partner {
   display: flex;
-  width: calc(200%); /* da wir zwei .slide-Blöcke haben */
+  width: calc(200%);
   animation: scroll 40s linear infinite;
 }
 
 .slide {
   display: flex;
-  width: 50%; /* jede Slide nimmt die Hälfte der Track-Breite */
+  width: 50%;
   justify-content: space-around;
   align-items: center;
 }
 
 .slide img {
-  max-height: 70px; /* Logo-Höhe anpassen */
-  margin: 0 2.4rem; /* Abstand zwischen den Logos */
+  max-height: 70px;
+  margin: 0 38.4px;
   transition: filter 0.3s;
 }
 
 .slide img:hover {
-  filter: none; /* bei Hover farbig anzeigen */
+  filter: none;
 }
 
 @keyframes scroll {
@@ -122,12 +115,10 @@ hr {
   padding: 0;
 }
 
-/* 1. Sektion-Container */
 .tabellen-layout-start {
   margin-top: 10%;
 }
 
-/* 2. Überschriften */
 .tabellen-layout-start h2 {
   font-family: inter;
   font-weight: 500;
@@ -138,29 +129,26 @@ hr {
 
 .tabellen-layout-start h3 {
   font-family: inter;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   margin: 0;
   text-align: center;
 }
 
-/* 3. Layout der Mannschafts‑Spalten */
 .tabellen-layout-start .Mannschaften {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
-  margin: 0 auto 0; /* zentriert und mit Abstand nach oben */
+  margin: 0 auto;
 }
 
-/* 4. Styling der Boxen */
 .tabellen-layout-start .herren-1,
 .tabellen-layout-start .herren-2,
 .tabellen-layout-start .damen {
-  padding: 1rem;
+  padding: 16px;
   color: white;
 }
 
-/* 4a. Spezifische Hintergründe */
 .tabellen-layout-start .herren-1 {
   background: var(--primary-color);
 }
@@ -168,4 +156,161 @@ hr {
 .tabellen-layout-start .herren-2,
 .tabellen-layout-start .damen {
   background: var(--black-color);
+}
+
+.tabellen-layout-start-spiele {
+  width: 80%;
+  margin: 2% auto;
+}
+
+.tabellen-layout-start-spiele .spiele-informationen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+
+.tabellen-layout-start-spiele h3 {
+  color: white;
+  font-family: inter;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px 0;
+  background: var(--primary-color);
+}
+
+.letzte-spiele h3 {
+  margin: 18px 34px 0 0;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.countdown-item {
+  background: var(--black-color);
+  color: var(--white-color);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-zahl {
+  font-family: inter;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.countdown-zeit {
+  font-family: inter;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.naechster-match {
+  width: 100%;
+  margin: 0 auto;
+  font-family: inter, sans-serif;
+}
+
+.naechster-match-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 32px 16px;
+  color: #fff;
+  border-bottom: 6px solid var(--secundary-color);
+}
+
+.naechster-match-team-1,
+.naechster-match-team-2 {
+  display: flex;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+.naechster-match-vs {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.naechster-match-informationen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #333;
+  padding: 16px;
+  color: #fff;
+}
+
+.naechster-match-informationen-ort,
+.naechster-match-informationen-datum {
+  text-align: center;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.letzte-spiele-container {
+  height: 385px; /* Deine feste Höhe */
+}
+
+.letzte-spiele-beide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spiel 1 oben, Spiel 2 unten */
+  height: 281px; /* füllt die 385px des Eltern‑Containers */
+  position: relative; /* nicht zwingend nötig, aber behält bisherigen Kontext */
+}
+
+.letztes-spiel-1 {
+  font-family: inter, sans‑serif;
+  /* margin kannst Du hier komplett entfernen oder nur horizontal lassen: */
+  margin: 16px 0 0 0;
+}
+
+.letztes-spiel-2 {
+  font-family: inter, sans‑serif;
+  /* margin kannst Du hier komplett entfernen oder nur horizontal lassen: */
+  margin: 0;
+}
+
+.letzte-spiele-resultat {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-bottom: 2px solid var(--white-color);
+}
+
+.letzte-spiele-resultat div:nth-child(1),
+.letzte-spiele-resultat div:nth-child(3) {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.letzte-spiele-resultat div:nth-child(2) {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.letzte-spiele-datum {
+  background-color: var(--black-color);
+  padding: 8px;
+  color: var(--white-color);
+  text-align: center;
 }
