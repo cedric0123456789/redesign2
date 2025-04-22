@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #006cb5;
+  --black-color: #323f48;
+  --secundary-color: #a5d6f7;
+  --white-color: #ffffff;
+}
+
+* {
+  margin: 0;
+}
+
+.tabelle {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inter, sans-serif;
+  margin: 0;
+}
+
+.tabelle thead th {
+  background-color: var(--black-color);
+  color: #c0c4cc;
+  font-weight: 400;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+
+.tabelle td {
+  padding: 10px;
+  font-size: 14px;
+  color: var(--white-color);
+}
+
+/* Alternierende Hintergründe */
+.tabelle tbody tr:nth-child(odd) {
+  background-color: var(--black-color); /* dunkel */
+}
+.tabelle tbody tr:nth-child(even) {
+  background-color: #404a55; /* etwas heller */
+}
+
+/* Hervorhebung der aktuellen Zeile */
+.tabelle tbody tr.highlight {
+  background-color: #2a3640 !important;
+}
+.tabelle tbody tr.highlight td {
+  color: #5aadea; /* Akzent-Farbe für Text (z.B. Blau) */
+}
+
+/* POS-Spalte in hellerem Grau */
+.tabelle td:first-child {
+  color: #8a99a7;
+  width: 3rem;
+}
+
+/* PTS-Spalte rechts ausrichten */
+.tabelle td:last-child {
+  text-align: right;
+  width: 3rem;
+}
