@@ -5,6 +5,8 @@
   --white-color: #ffffff;
 }
 
+/*Gesamte Seiten*/
+
 body {
   margin: 0;
   font-family: inter;
@@ -68,6 +70,16 @@ h1 {
   color: var(--white-color);
 }
 
+h2 {
+  font-family: inter;
+  font-weight: 500;
+  font-size: 38px;
+  margin-bottom: 5%;
+  text-align: center;
+  color: var(--black-color);
+}
+
+/*Startseite*/
 .partner-slider {
   position: relative;
   overflow: hidden;
@@ -119,15 +131,6 @@ hr {
   margin-top: 10%;
 }
 
-h2 {
-  font-family: inter;
-  font-weight: 500;
-  font-size: 38px;
-  margin-bottom: 5%;
-  text-align: center;
-  color: var(--black-color);
-}
-
 .tabellen-layout-start h3 {
   font-family: inter;
   font-weight: 600;
@@ -150,7 +153,6 @@ h2 {
   color: white;
 }
 
-/* Tab-Buttons */
 .tabs {
   display: flex;
   margin-bottom: 1rem;
@@ -187,7 +189,6 @@ h2 {
   color: white;
 }
 
-/* Tab-Inhalte */
 .tab-content {
   display: none;
 }
@@ -464,6 +465,7 @@ svg {
 
 svg:hover {
   fill: var(--primary-color);
+  stroke-width: 1.5px;
 }
 
 footer {
@@ -593,7 +595,7 @@ footer {
   border: solid 5px var(--primary-color);
   padding: 30px;
   position: relative;
-  height: 300px;
+  height: 190px;
 }
 
 .sporthallen-block-link {
@@ -632,4 +634,10 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 4%;
+}
+
+h4 {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: bold;
 }
