@@ -15,7 +15,6 @@ header {
   background: var(--primary-color);
   padding: 10px 20px;
   color: var(--white-color);
-  
 }
 
 nav {
@@ -162,7 +161,7 @@ h2 {
 }
 
 .tabs::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: var(--indicator-left, 0);
@@ -195,7 +194,6 @@ h2 {
 .tab-content.active {
   display: block;
 }
-
 
 .tabellen-layout-start .herren-1 {
   background: var(--primary-color);
@@ -590,7 +588,6 @@ footer {
   gap: 4%;
 }
 
-
 .sporthallen-block {
   width: 300px;
   border: solid 5px var(--primary-color);
@@ -628,7 +625,6 @@ footer {
   align-items: center;
   margin-top: 10%;
 }
-
 
 .sporthallen-block-layout {
   margin-top: 5%;
