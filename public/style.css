@@ -150,6 +150,51 @@ h2 {
   color: white;
 }
 
+/* Tab-Buttons */
+.tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+.tabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--indicator-left, 0);
+  width: var(--indicator-width, 0);
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease, width 0.3s ease;
+}
+.tabs button {
+  background: var(--black-color);
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+  flex: 1;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.tabs button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Tab-Inhalte */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
 .tabellen-layout-start .herren-1 {
   background: var(--primary-color);
 }
@@ -543,7 +588,6 @@ footer {
   gap: 4%;
 }
 
-
 .sporthallen-block {
   width: 300px;
   border: solid 5px var(--primary-color);
@@ -581,7 +625,6 @@ footer {
   align-items: center;
   margin-top: 10%;
 }
-
 
 .sporthallen-block-layout {
   margin-top: 5%;
