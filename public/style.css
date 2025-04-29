@@ -31,10 +31,17 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  width: 35%;
+  justify-content: space-between;
 }
 
 nav ul li {
   margin: 0 15px;
+  position: relative;
+  height: 110px;
+  align-items: center;
+  display: flex;
 }
 
 nav ul li a {
@@ -43,8 +50,36 @@ nav ul li a {
   font-size: 18px;
 }
 
-nav ul li a.active {
-  font-weight: bold;
+/* 1) Grundstruktur des Submenus – zunächst ausblenden und absolut positionieren */
+nav ul li .submenu {
+  display: none;
+  background: var(--black-color);
+  list-style: none;
+  z-index: 100;
+  position: absolute;
+  top: 300%;
+  width: 100vw; /* 100 % der Viewport-Breite */
+  overflow: hidden;
+}
+
+/* 2) Einblenden, wenn man über das Eltern-li hovert*/
+nav ul li:hover > .submenu {
+  display: block;
+}
+
+/* 3) Styling der einzelnen Einträge */
+nav ul li .submenu li {
+  padding: 16px 20px; /* Innenabstand wie im Verein-Menü */
+  border-bottom: 2px solid var(--secundary-color); /* die dünne blaue Linie */
+  margin: 0; /* für sauberen Rahmen */
+}
+
+/* falls Du Links im Submenu nutzt: */
+nav ul li .submenu li a {
+  display: block;
+  color: var(--white-color);
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .logo,
@@ -85,6 +120,8 @@ h2 {
   overflow: hidden;
   background: #fff;
   padding: 32px 0;
+  outline: solid 5px var(--secundary-color);
+  margin: 10px 0;
 }
 
 .logos-partner {
@@ -487,8 +524,8 @@ footer {
 .footer-informationen {
   display: flex;
   flex-direction: row;
-  width: 85%;
-  justify-content: space-evenly;
+  width: 90%;
+  justify-content: space-between;
 }
 
 .footer-logos {
@@ -498,6 +535,9 @@ footer {
 }
 .footer-informationen p {
   color: var(--white-color);
+  justify-content: center;
+  display: flex;
+  width: 195.85px;
 }
 
 .footer-grau {
