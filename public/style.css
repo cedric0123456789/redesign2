@@ -3,10 +3,7 @@
   --black-color: #323f48;
   --secundary-color: #a5d6f7;
   --white-color: #ffffff;
-}
-
-/*Gesamte Seiten*/
-
+} /*Gesamte Seiten*/
 body {
   margin: 0;
   font-family: inter;
@@ -18,76 +15,65 @@ header {
   padding: 10px 20px;
   color: var(--white-color);
 }
-
 nav {
   display: flex;
   height: 90px;
   align-items: center;
   justify-content: space-between;
 }
-
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 35%;
-  justify-content: space-between;
-}
-
-nav ul li {
+.menu-item {
   margin: 0 15px;
   position: relative;
   height: 110px;
   align-items: center;
   display: flex;
+  position: relative;
+  padding: 5px 15px;
+  justify-content: space-between;
 }
-
-nav ul li a {
+.menu-item a {
   color: var(--white-color);
   text-decoration: none;
   font-size: 18px;
+  width: max-content;
 }
 
-/* 1) Grundstruktur des Submenus – zunächst ausblenden und absolut positionieren */
-nav ul li .submenu {
+.menu-list {
+  display: flex;
+}
+
+.menu-item:hover .menu-submenu-wrapper {
+  display: flex;
+  top: 90px;
+  left: 0;
+}
+.menu-submenu-wrapper {
   display: none;
-  background: var(--black-color);
-  list-style: none;
-  z-index: 100;
   position: absolute;
-  top: 300%;
-  width: 100vw; /* 100 % der Viewport-Breite */
-  overflow: hidden;
+  background-color: var(--black-color);
+  z-index: 5;
 }
-
-/* 2) Einblenden, wenn man über das Eltern-li hovert*/
-nav ul li:hover > .submenu {
-  display: block;
+.submenu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
 }
-
-/* 3) Styling der einzelnen Einträge */
-nav ul li .submenu li {
-  padding: 16px 20px; /* Innenabstand wie im Verein-Menü */
-  border-bottom: 2px solid var(--secundary-color); /* die dünne blaue Linie */
-  margin: 0; /* für sauberen Rahmen */
-}
-
-/* falls Du Links im Submenu nutzt: */
-nav ul li .submenu li a {
-  display: block;
-  color: var(--white-color);
-  text-decoration: none;
-  font-size: 18px;
+.submenu-item {
+  padding: 0 15px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px var(--secundary-color);
 }
 
 .logo,
 .logo-img {
   width: 70px;
   height: 70px;
+  margin-left: 10px;
 }
-
 .hero {
   position: relative;
   width: 100%;
@@ -99,12 +85,10 @@ nav ul li .submenu li a {
   color: var(--white-color);
   text-align: center;
 }
-
 h1 {
   font-size: 42px;
   color: var(--white-color);
 }
-
 h2 {
   font-family: inter;
   font-weight: 500;
@@ -112,41 +96,34 @@ h2 {
   margin-bottom: 5%;
   text-align: center;
   color: var(--black-color);
-}
-
-/*Startseite*/
+} /*Startseite*/
 .partner-slider {
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: var(--white-color);
   padding: 32px 0;
   outline: solid 5px var(--secundary-color);
   margin: 10px 0;
 }
-
 .logos-partner {
   display: flex;
   width: calc(200%);
   animation: scroll 40s linear infinite;
 }
-
 .slide {
   display: flex;
   width: 50%;
   justify-content: space-around;
   align-items: center;
 }
-
 .slide img {
   max-height: 70px;
   margin: 0 38.4px;
   transition: filter 0.3s;
 }
-
 .slide img:hover {
   filter: none;
 }
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -155,19 +132,16 @@ h2 {
     transform: translateX(-50%);
   }
 }
-
 hr {
   border: none;
-  background-color: #006cb5;
+  background-color: var(--primary-color);
   height: 5px;
   margin: 0;
   padding: 0;
 }
-
 .tabellen-layout-start {
   margin-top: 10%;
 }
-
 .tabellen-layout-start h3 {
   font-family: inter;
   font-weight: 600;
@@ -175,21 +149,18 @@ hr {
   margin: 0;
   text-align: center;
 }
-
 .tabellen-layout-start .Mannschaften {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80%;
   margin: 0 auto;
 }
-
 .tabellen-layout-start .herren-1,
 .tabellen-layout-start .herren-2,
 .tabellen-layout-start .damen {
   padding: 16px;
   color: white;
 }
-
 .tabs {
   display: flex;
   margin-bottom: 1rem;
@@ -198,7 +169,6 @@ hr {
   margin: 0 auto;
   color: white;
 }
-
 .tabs::after {
   content: "";
   position: absolute;
@@ -225,34 +195,28 @@ hr {
   background-color: var(--primary-color);
   color: white;
 }
-
 .tab-content {
   display: none;
 }
 .tab-content.active {
   display: block;
 }
-
 .tabellen-layout-start .herren-1 {
   background: var(--primary-color);
 }
-
 .tabellen-layout-start .herren-2,
 .tabellen-layout-start .damen {
   background: var(--black-color);
 }
-
 .tabellen-layout-start-spiele {
   width: 80%;
   margin: 2% auto;
 }
-
 .tabellen-layout-start-spiele .spiele-informationen {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2%;
 }
-
 .tabellen-layout-start-spiele h3 {
   color: white;
   font-family: inter;
@@ -263,7 +227,6 @@ hr {
   background: var(--primary-color);
   margin: 16px 0;
 }
-
 .countdown {
   display: flex;
   justify-content: center;
@@ -271,47 +234,42 @@ hr {
   gap: 16px;
   margin: 16px 0 0 0;
 }
-
 .countdown-item {
   background: var(--black-color);
   color: var(--white-color);
-  width: 80px;
+  width: 25%;
   height: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin: auto;
+  justify-content: center;
 }
-
 .countdown-zahl {
   font-family: inter;
   font-size: 28px;
   font-weight: 700;
 }
-
 .countdown-zeit {
   font-family: inter;
   font-size: 14px;
   font-weight: 400;
   margin-top: 4px;
 }
-
 .naechster-match {
   width: 100%;
   margin: 0 auto;
   font-family: inter, sans-serif;
 }
-
 .naechster-match-teams {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   background-color: var(--primary-color);
   padding: 32px 16px;
-  color: #fff;
+  color: var(--white-color);
   border-bottom: 5px solid var(--secundary-color);
 }
-
 .naechster-match-team-1,
 .naechster-match-team-2 {
   display: flex;
@@ -319,21 +277,18 @@ hr {
   width: 50px;
   height: 50px;
 }
-
 .naechster-match-vs {
   text-align: center;
   font-size: 28px;
   font-weight: 700;
 }
-
 .naechster-match-informationen {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--black-color);
   padding: 16px;
-  color: #fff;
+  color: var(--white-color);
 }
-
 .naechster-match-informationen-ort,
 .naechster-match-informationen-datum {
   text-align: center;
@@ -341,44 +296,37 @@ hr {
   font-size: 14px;
   font-weight: 400;
 }
-
 .letzte-spiele-container {
   height: 425px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .letzte-spiele-beide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
 .letztes-spiel-1 {
   font-family: inter, sans‑serif;
   margin: 16px 0 0 0;
 }
-
 .letztes-spiel-2 {
   font-family: inter, sans‑serif;
   margin: 0;
 }
-
 .letzte-spiele-teams {
   font-family: inter;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
 }
-
 .letzte-spiele-spielstand {
   font-family: inter;
   font-size: 20px;
   font-weight: 600;
 }
-
 .letzte-spiele-resultat {
   padding: 24px;
   display: grid;
@@ -388,7 +336,6 @@ hr {
   color: var(--white-color);
   border-bottom: 5px solid var(--secundary-color);
 }
-
 .letzte-spiele-datum {
   background-color: var(--black-color);
   padding: 16px;
@@ -397,28 +344,24 @@ hr {
   font-size: 14px;
   font-weight: 400;
 }
-
 .naechste-spiele-container {
   height: 425px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .naechste-spiele-beide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
-
 .tabelle-container {
   height: 425px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
 .tabelle-beide {
   margin: 16px 0 0 0;
   display: flex;
@@ -426,22 +369,18 @@ hr {
   justify-content: space-between;
   height: 100%;
 }
-
 .tabelle-iframe {
   width: 100%;
   height: 100%;
 }
-
 iframe {
   width: 100%;
   height: 100%;
 }
-
 .tabelle-link {
   color: var(--white-color);
   text-decoration: none;
 }
-
 .ganze-tabelle {
   background-color: var(--black-color);
   padding: 16px;
@@ -451,30 +390,25 @@ iframe {
   text-align: center;
   justify-content: center;
 }
-
 .ganze-tabelle:hover {
   background-color: var(--white-color);
   color: var(--black-color);
   outline: solid 3px var(--black-color);
 }
-
 .news-layout-start {
   margin-top: 10%;
 }
-
 .news-block-layout {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 4%;
 }
-
 .news-block {
   width: 300px;
   border: solid 5px var(--primary-color);
   padding: 30px;
 }
-
 .news-block-link {
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -485,7 +419,6 @@ iframe {
   font-size: 16px;
   font-weight: 400;
 }
-
 .news-block-link:hover {
   background-color: transparent;
   padding: 10px 20px;
@@ -494,24 +427,20 @@ iframe {
   font-size: 16px;
   font-weight: 400;
 }
-
 svg {
   margin-left: 20px;
   stroke-width: 1.25px;
 }
-
 svg:hover {
   fill: var(--primary-color);
   stroke-width: 1.5px;
 }
-
 footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 10%;
 }
-
 .footer-blau {
   background-color: var(--primary-color);
   display: flex;
@@ -520,14 +449,12 @@ footer {
   padding: 40px 0 30px 0;
   gap: 20px;
 }
-
 .footer-informationen {
   display: flex;
   flex-direction: row;
   width: 90%;
   justify-content: space-between;
 }
-
 .footer-logos {
   justify-content: space-between;
   display: flex;
@@ -539,7 +466,6 @@ footer {
   display: flex;
   width: 195.85px;
 }
-
 .footer-grau {
   background-color: var(--black-color);
   color: var(--white-color);
@@ -547,7 +473,6 @@ footer {
   justify-content: center;
   padding: 10px;
 }
-
 .hero-verein {
   position: relative;
   width: 100%;
@@ -560,14 +485,12 @@ footer {
   color: var(--white-color);
   text-align: center;
 }
-
 .ueber-uns {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
 }
-
 .ueber-uns-fliesstext {
   display: flex;
   text-align: center;
@@ -579,7 +502,6 @@ footer {
   font-size: 16px;
   font-weight: 400;
 }
-
 .angebot-block {
   width: 300px;
   border: solid 5px var(--primary-color);
@@ -587,7 +509,6 @@ footer {
   position: relative;
   height: 300px;
 }
-
 .angebot-block-link {
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -601,7 +522,6 @@ footer {
   bottom: 30;
   left: 30;
 }
-
 .angebot-block-link:hover {
   background-color: transparent;
   padding: 10px 20px;
@@ -610,18 +530,15 @@ footer {
   font-size: 16px;
   font-weight: 400;
 }
-
 .angebot-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
 }
-
 .link-button {
   text-decoration: none;
 }
-
 .angebot-block-layout {
   margin-top: 5%;
   display: flex;
@@ -629,7 +546,6 @@ footer {
   justify-content: center;
   gap: 4%;
 }
-
 .sporthallen-block {
   width: 300px;
   border: solid 5px var(--primary-color);
@@ -637,7 +553,6 @@ footer {
   position: relative;
   height: 190px;
 }
-
 .sporthallen-block-link {
   background-color: var(--primary-color);
   padding: 10px 20px;
@@ -651,7 +566,6 @@ footer {
   bottom: 30;
   left: 30;
 }
-
 .sporthallen-block-link:hover {
   background-color: transparent;
   padding: 10px 20px;
@@ -660,14 +574,12 @@ footer {
   font-size: 16px;
   font-weight: 400;
 }
-
 .sporthallen-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
 }
-
 .sporthallen-block-layout {
   margin-top: 5%;
   display: flex;
@@ -675,9 +587,14 @@ footer {
   justify-content: center;
   gap: 4%;
 }
-
 h4 {
   color: var(--primary-color);
   font-size: 20px;
   font-weight: bold;
+}
+
+.teams-spiele-informationen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
 }

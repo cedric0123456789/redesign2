@@ -11,36 +11,41 @@
   </head>
   <body>
 
-    <div class="tabs">
-      <!-- Radio-Buttons -->
-      <input type="radio" name="tabs" id="tab1" checked />
-      <input type="radio" name="tabs" id="tab2" />
-      <input type="radio" name="tabs" id="tab3" />
+    <div class="menu">
+      <ul class="menu__list">
 
-      <!-- Tab-Labels -->
-      <div class="tab-labels">
-        <label for="tab1">Tab Eins</label>
-        <label for="tab2">Tab Zwei</label>
-        <label for="tab3">Tab Drei</label>
-      </div>
+        <li class="menu__item">
+          <span>Punkt 1</span>
+        </li>
 
-      <!-- Tab-Inhalte -->
-      <div class="tab-content">
-        <div class="tab-panel panel1">
-          <h2>Inhalt von Tab Eins</h2>
-          <p>Hier steht der Text für das erste Tab-Panel. Du kannst beliebigen
-            HTML‑Content einfügen.</p>
-        </div>
-        <div class="tab-panel panel2">
-          <h2>Inhalt von Tab Zwei</h2>
-          <p>Dies ist das zweite Tab-Panel. Auch hier sind Bilder, Listen oder
-            Formulare möglich.</p>
-        </div>
-        <div class="tab-panel panel3">
-          <h2>Inhalt von Tab Drei</h2>
-          <p>Das dritte Tab-Panel enthält weitere Informationen oder Features.</p>
-        </div>
-      </div>
+        <li class="menu__item">
+          <span>Punkt 2</span>
+          <div class="menu__submenu-wrapper">
+            <ul class="menu__submenu">
+              <li class="menu__submenu-item">Subpunkt 1</li>
+              <li class="menu__submenu-item">Subpunkt 2</li>
+              <li class="menu__submenu-item">Subpunkt 3</li>
+              <li class="menu__submenu-item">Subpunkt 4</li>
+            </ul>
+            <ul class="menu__submenu">
+              <li class="menu__submenu-item">Subpunkt 5</li>
+              <li class="menu__submenu-item">Subpunkt 6</li>
+              <li class="menu__submenu-item">Subpunkt 7</li>
+              <li class="menu__submenu-item">Subpunkt 8</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="menu__item">
+          <span>Punkt 3</span>
+        </li>
+
+        <li class="menu__item">
+          <span>Punkt 4</span>
+        </li>
+
+      </ul>
+
     </div>
 
   </body>

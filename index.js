@@ -29,6 +29,10 @@ app.get("/verein", async function (req, res) {
   res.render("verein", {});
 });
 
+app.get("/herren1", async function (req, res) {
+  res.render("herren1", {});
+});
+
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
 app.listen(3010, () => {
   console.log(`Example app listening at http://localhost:3010`);
