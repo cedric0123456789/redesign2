@@ -399,6 +399,21 @@ iframe {
 }
 .ganze-tabelle {
   background-color: var(--black-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 16px;
+  width: 40%;
+  display: flex;
+  margin: 12px auto 0;
+  text-align: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, outline 0.3s ease, color 0.3s ease,
+    font-size 0.3s ease, font-weight 0.3s ease;
+}
+.ganze-tabelle {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-decoration: none;
   padding: 16px;
   width: 40%;
   display: flex;

@@ -9,7 +9,7 @@ const app = createApp({
 });
 
 /* Startseite */
-app.get("/", async function (req, res) {
+app.get("/home", async function (req, res) {
   res.render("start", {});
 });
 
@@ -21,15 +21,11 @@ app.get("/tabelle", async function (req, res) {
   res.render("tabelle", {});
 });
 
-app.get("/test", async function (req, res) {
-  res.render("test", {});
-});
-
 app.get("/verein", async function (req, res) {
   res.render("verein", {});
 });
 
-app.get("/herren1", async function (req, res) {
+app.get("/teams/herren1", async function (req, res) {
   res.render("herren1", {});
 });
 
