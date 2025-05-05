@@ -9,7 +9,7 @@ const app = createApp({
 });
 
 /* Startseite */
-app.get("/home", async function (req, res) {
+app.get("/", async function (req, res) {
   res.render("start", {});
 });
 

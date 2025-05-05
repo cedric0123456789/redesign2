@@ -90,6 +90,59 @@ nav {
   fill: white;
   stroke: white;
 }
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.search-icon:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+/* Das Inputfeld */
+.search-field {
+  width: 0;
+  opacity: 0;
+  margin-left: 10px;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--white-color);
+  border: none;
+  border-bottom: 1px solid var(--white-color);
+}
+
+.search-field::placeholder {
+  color: var(--white-color);
+}
+
+/* Zeige das Feld bei Hover über Container */
+.search-container:hover .search-field {
+  width: 150px;
+  opacity: 1;
+}
+
+.search-field:not(:placeholder-shown) {
+  border: none;
+  border-bottom: 1px solid var(--white-color);
+}
+
+/* Optional: Menü schiebt sich etwas nach links */
+.menu-list {
+  display: flex;
+  gap: 20px;
+  transition: margin-right 0.4s ease;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -458,6 +511,8 @@ iframe {
   position: absolute;
   bottom: 30;
   left: 30;
+  display: flex;
+  gap: 15px;
 }
 
 .link-style:hover {
@@ -628,6 +683,11 @@ footer {
   justify-content: center;
   gap: 4%;
 }
+
+.maps-logo {
+  width: 15px;
+}
+
 h4 {
   color: var(--primary-color);
   font-size: 20px;
