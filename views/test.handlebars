@@ -1,0 +1,71 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>News-Filter mit JS</title>
+    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <div class="filters">
+      <input type="radio" name="filter" id="filter-all" value="all" checked />
+      <label for="filter-all">Alle News</label>
+
+      <input type="radio" name="filter" id="filter-tech" value="tech" />
+      <label for="filter-tech">Vereinsnews</label>
+
+      <input type="radio" name="filter" id="filter-sports" value="sports" />
+      <label for="filter-sports">Spielberichte</label>
+
+      <input type="radio" name="filter" id="filter-events" value="events" />
+      <label for="filter-events">Events</label>
+    </div>
+
+    <div class="news-block-layout">
+      <div class="news-block-layout">
+        <div class="news-block" data-category="tech">
+          <h2>Neue KI-Technologie vorgestellt</h2>
+          <p>Forschende präsentieren eine revolutionäre KI.</p>
+        </div>
+
+        <div class="news-block" data-category="sports">
+          <h2>Fußball: Meisterschaftsfinale</h2>
+          <p>Das große Duell um die Krone steht an.</p>
+        </div>
+
+        <div class="news-block" data-category="politics">
+          <h2>Wahlen 2025: Erste Prognosen</h2>
+          <p>Experten diskutieren die möglichen Verlierer.</p>
+        </div>
+
+        <div class="news-block" data-category="tech">
+          <h2>Smartphone-Launch nächste Woche</h2>
+          <p>Alle Spezifikationen und Gerüchte im Überblick.</p>
+        </div>
+
+        <div class="news-block" data-category="sports">
+          <h2>Olympia-Vorbereitung läuft</h2>
+          <p>Athleten trainieren hart für die Sommerspiele.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => { const filters =
+      document.querySelector('.filters'); const radios =
+      filters.querySelectorAll('input[name="filter"]'); const posts =
+      document.querySelectorAll('.news-block'); function updateIndicator() {
+      const active = filters.querySelector('input[name="filter"]:checked');
+      const lbl = filters.querySelector(`label[for="${active.id}"]`);
+      filters.style.setProperty('--indicator-left', `${lbl.offsetLeft}px`);
+      filters.style.setProperty('--indicator-width', `${lbl.offsetWidth}px`); }
+      function filterPosts() { const sel =
+      filters.querySelector('input[name="filter"]:checked').value;
+      posts.forEach(p => { p.style.display = (sel === 'all' ||
+      p.dataset.category === sel) ? 'block' : 'none'; }); updateIndicator(); }
+      radios.forEach(r => r.addEventListener('change', filterPosts));
+      filterPosts(); });
+    </script>
+
+  </body>
+</html>

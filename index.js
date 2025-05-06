@@ -29,8 +29,16 @@ app.get("/teams/herren1", async function (req, res) {
   res.render("herren1", {});
 });
 
+app.get("/verein/news", async function (req, res) {
+  res.render("news", {});
+});
+
 app.get("/100er-club", async function (req, res) {
   res.render("100er-club", {});
+});
+
+app.get("/test", async function (req, res) {
+  res.render("test", {});
 });
 
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
