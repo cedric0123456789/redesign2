@@ -788,3 +788,45 @@ h4 {
   background-color: var(--primary-color);
   font-weight: bold;
 }
+
+.anzahl-news-seiten {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+/* Verstecke die Radio-Inputs */
+.anzahl-news-seiten input[type="radio"] {
+  display: none;
+}
+
+/* Gemeinsames Label-Styling */
+.anzahl-news-seiten label {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--black-color);
+  transition: color 0.2s;
+}
+
+/* Hover-Effekt */
+.anzahl-news-seiten label:hover {
+  color: var(--primary-color);
+}
+
+.anzahl-news-seiten input[type="radio"]:checked + label {
+  color: var(--primary-color);
+}
+
+.news-fliesstext {
+  display: flex;
+  text-align: left;
+  width: 65%;
+  align-items: center;
+  margin-top: 2%;
+  color: var(--black-color);
+  font-family: inter;
+  font-size: 16px;
+  font-weight: 400;
+}

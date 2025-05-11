@@ -37,6 +37,10 @@ app.get("/100er-club", async function (req, res) {
   res.render("100er-club", {});
 });
 
+app.get("/verein/news/newsbeitrag", async function (req, res) {
+  res.render("newsbeitrag", {});
+});
+
 app.get("/test", async function (req, res) {
   res.render("test", {});
 });
