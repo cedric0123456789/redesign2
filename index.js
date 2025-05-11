@@ -17,8 +17,8 @@ app.get("/impressum", async function (req, res) {
   res.render("impressum", {});
 });
 
-app.get("/tabelle", async function (req, res) {
-  res.render("tabelle", {});
+app.get("/tabelle-2-liga", async function (req, res) {
+  res.render("tabelle-2-liga", {});
 });
 
 app.get("/verein", async function (req, res) {
