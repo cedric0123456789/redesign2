@@ -13,12 +13,28 @@ app.get("/", async function (req, res) {
   res.render("start", {});
 });
 
+app.get("/erklaerseite", async function (req, res) {
+  res.render("erklaerseite", {});
+});
+
 app.get("/impressum", async function (req, res) {
   res.render("impressum", {});
 });
 
 app.get("/tabelle-2-liga", async function (req, res) {
   res.render("tabelle-2-liga", {});
+});
+
+app.get("/tabelle-4-liga", async function (req, res) {
+  res.render("tabelle-4-liga", {});
+});
+
+app.get("/tabelle-damen", async function (req, res) {
+  res.render("tabelle-damen", {});
+});
+
+app.get("/404", async function (req, res) {
+  res.render("404", {});
 });
 
 app.get("/verein", async function (req, res) {

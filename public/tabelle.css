@@ -26,6 +26,7 @@
   position: sticky;
   top: 0;
   z-index: 0;
+  border-bottom: solid 3px var(--secundary-color);
 }
 
 .tabelle thead th#PTS {
